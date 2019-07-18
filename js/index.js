@@ -188,7 +188,7 @@ var downTime = function(){
     // 1、模拟倒计时的时间，是14个小时
     // 2、利用定时器，1秒一次 重新展示时间
 
-    var time = 60*60*14;
+    var time = 60*60*24;
 
     var skTime = document.querySelector('.sk_time');
     var skSpans = skTime.querySelectorAll('span');
@@ -207,13 +207,29 @@ var downTime = function(){
         var m = Math.floor(time%3600/60);
         var s = Math.floor(time%60);
 
-        // 设置时间
-        skSpans[0].innerHTML = h;
-        skSpans[1].innerHTML = m;
-        skSpans[2].innerHTML = s;
-
         if(time <= 0){
             clearInterval(timer);
+            // 设置时间
+            skSpans[0].innerHTML = 00;
+            skSpans[1].innerHTML = 00;
+            skSpans[2].innerHTML = 00;
+        }else{
+            // 设置时间
+            if(h < 10){
+                skSpans[0].innerHTML = '0' + h;
+            }else{
+                skSpans[0].innerHTML = h;
+            }
+            if(m < 10){
+                skSpans[1].innerHTML = '0' + m;
+            }else{
+                skSpans[1].innerHTML = m;
+            }
+            if(s < 10){
+                skSpans[2].innerHTML = '0' + s;
+            }else{
+                skSpans[2].innerHTML = s;
+            }
         }
 
     },1000);
