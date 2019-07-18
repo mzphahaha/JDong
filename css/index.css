@@ -305,30 +305,36 @@ body{
     font-size: 13px;
 }
 /* 内容 */
-.jd_product .jd_proBox .jd_proContent{
-    width: 100%;
-}
 .jd_product .jd_proBox .jd_proContent ul span{
-    width: 185px;
-    height: 191px;
-    background: url(../image/sprite_proProduct.fw.png);
+    width: 191px;
+    height: 188px;
+    background: url(../image/sprite_proProduct.fw.png) no-repeat;
     display: inline-block;
+    background-clip:content-box;
 }
 .jd_product .jd_proBox .jd_proContent ul .img1{
     background-position: 0px 0px;
 }
 .jd_product .jd_proBox .jd_proContent ul .img2{
-    background-position: -192.5px 0px;
+    background-position: 0px -188px;
 }
-.jd_product .jd_proBox .jd_proContent ul .img3{
-    background-position: -385px 0px;
+/* .jd_product .jd_proBox .jd_proContent ul span{
+    transform: scale(0.55);
+} */
+.jd_product .jd_proBox .jd_proContent{
+    width: 100%;
 }
-.jd_product .jd_proBox .jd_proContent ul .img4{
-    background-position: -577.5px 0px;
+.jd_product .jd_proBox .jd_proContent ul{
+    width: 100%;
 }
 .jd_product .jd_proBox .jd_proContent ul li{
+    width: 47%;
     text-align: center;
     float: left;
+}
+.jd_product .jd_proBox .jd_proContent ul li span{
+    width: 100%;
+    text-align: center;
 }
 .jd_product .jd_proBox .jd_proContent ul p{
     color: #E93B3D;
