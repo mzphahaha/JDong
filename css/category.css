@@ -1,0 +1,125 @@
+/* 全屏 */
+.jd_category{
+    position: fixed;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.jd_topBar{
+    width: 100%;
+    height: 54px;
+    border-bottom: 1px solid #e5e5e5;
+    /* background-size: 1px 44px; */
+}
+.jd_topBar a{
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    background: url(../image/sprite_icon.fw.png) no-repeat;
+}
+.jd_topBar .icon_back{
+    width: 18px;
+    height: 26px;
+    left: 14px;
+    top: 12px;
+    background-position: 0px -145px;
+}
+.jd_topBar .icon_menu{
+    width: 33px;
+    height: 17px;
+    right: 10px;
+    top: 17px;
+    background-position: 0px -175px;
+}
+.jd_topBar form{
+    /* width: 100%; */
+    padding-left: 50px;
+    padding-right: 55px;
+}
+/* 百分比是基于父元素的内容的宽度和高度 */
+.jd_topBar form input{
+    width: 100%;
+    height: 34px;
+    border-radius: 15px;
+    margin-top: 9px; 
+    background-color: #F7F7F7;
+    padding-left: 45px;
+} 
+.jd_topBar form .icon_search{
+    width: 91px;
+    height: 91px;
+    background: url(../image/sprite_icon.fw.png) 0px -54px;
+    transform: scale(0.18);
+    position: absolute;
+    left: 30px;
+    top: -18px;
+}
+
+/* 主体内容 */
+.jd_main{
+    width: 100%;
+}
+.jd_main .cate_left{
+    width: 90px;
+    float: left;
+    background: #F8F8F8;
+    overflow: hidden;
+}
+.jd_main .cate_left ul{
+    width: 90px;
+    overflow: hidden;
+}
+.jd_main .cate_left ul li{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+}
+.jd_main .cate_left ul li a{
+    display: block;   /* 让a与父容器li大小一致 */
+}
+.jd_main .cate_left ul li.now{
+    border-right: none;
+    background: #fff;
+}
+.jd_main .cate_left ul li.now a{
+    color: red;
+}
+.jd_main .cate_right{
+    overflow: hidden;
+}
+.jd_main .cate_right h3{
+    font-weight: bold;
+    padding: 6px;
+}
+.jd_main .cate_right ul{
+    padding: 6px 10px 0px 10px;
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden;
+}
+.jd_main .cate_right ul li{
+    width: 33.33333%;
+    float: left;
+    text-align: center;
+    padding-bottom: 6px;
+    font-size: 0;
+}
+.jd_main .cate_right ul li a{
+    width: 100%;
+    display: block;
+}
+.jd_main .cate_right ul li a img{
+    /* background-size: 50% 50%; */
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+}
+.jd_main .cate_right ul li a p{
+    font-size: 12px;
+}

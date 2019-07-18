@@ -1,0 +1,544 @@
+body{
+    /* background: black; */
+    background: #F6F6F6;
+}
+
+/* 版心容器 */
+.jd_container{
+    width: 100%;
+    max-width: 750px;    /* 基于设计稿，目的是不失真 */
+    min-width: 320x;   /* 保证网页内容布局 */
+    margin: 0 auto;
+}
+
+/* 顶部搜索 */
+.jd_search{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.jd_search .jd_search_box{
+    width: 100%;
+    height: 44px;
+    margin: 0 auto;
+    background: rgba(228, 49, 48, 0);
+}
+.jd_search .jd_search_box a{
+    position: absolute;
+    top: 0;
+}
+.jd_search .jd_search_box .icon_logo{
+    width: 40px;
+    height: 32px;
+    /* background: url(../image/sprite_icon.fw.png) no-repeat;
+    background-size: 330px 220px;    压缩整个精灵图，原始精灵图是660*440 
+    background-position: 0px 0px;    定位，需要减半，因为图已压缩 */
+    background: url(../image/sprite_icon.fw.png) 0px 0px; 
+    transform: scale(0.5);   /* 图片压缩 */
+    left: 0;
+    margin-top: 5px;
+    margin-left: 6px;
+}
+.jd_search .jd_search_box .login{
+    width: 50px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    color: white;
+    right: 0;
+    font-size: 17px;
+} 
+.jd_search .jd_search_box form{
+    /* width: 100%; */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/* 百分比是基于父元素的内容的宽度和高度 */
+.jd_search .jd_search_box form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 7px; 
+    background-color: #F7F7F7;
+    padding-left: 80px;
+} 
+.jd_search .jd_search_box form .icon_jd{
+    width: 25px;
+    height: 20px;
+    background: url(../image/sprite_icon.fw.png) 0px -32px;
+    transform: scale(0.82);
+    position: absolute;
+    left: 60px;
+    top: 12px;
+    padding-right: 8px;
+    border-right: 1px solid #DDDDDD;
+}
+.jd_search .jd_search_box form .icon_search{
+    width: 91px;
+    height: 91px;
+    background: url(../image/sprite_icon.fw.png) 0px -54px;
+    transform: scale(0.18);
+    position: absolute;
+    left: 65px;
+    top: -23px;
+}
+
+/* 轮播图 */
+.jd_banner{
+    width: 100%;
+    position: relative;
+    /* top: 0; */
+    overflow: hidden;
+}
+.jd_banner ul:first-child{
+    /* 装10张图，所以是屏幕的10倍宽 */
+    width: 1000%;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+    overflow: hidden;
+}
+.jd_banner ul:first-child li{
+    width: 10%; 
+    float: left;
+}
+.jd_banner ul:first-child li a{
+    width: 100%;
+    display: block;
+}
+.jd_banner ul:first-child li a img{
+    width: 100%;
+    display: block;
+}
+.jd_banner ul:last-child{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;  /* 下面的宽度（3+8）*8个点 */
+}
+.jd_banner ul:last-child li{
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    float: left;
+    margin-left: 10px;
+}
+.jd_banner ul:last-child li:first-child{
+    margin-left: 0;
+}
+.jd_banner ul:last-child li.now{
+    background-color: #fff;
+}
+
+/* 导航栏 */
+.jd_nav span{
+    width: 60px;
+    height: 60px;
+    background: url(../image/sprite_icon.fw.png);
+    display: inline-block;
+}
+.jd_nav .img1{
+    background-position: -200px 0px;
+}
+.jd_nav .img2{
+    background-position: -300px 0px;
+}
+.jd_nav .img3{
+    background-position: -400px 0px;
+}
+.jd_nav .img4{
+    background-position: -500px 0px;
+}
+.jd_nav .img5{
+    background-position: -600px 0px;
+}
+.jd_nav .img6{
+    background-position: -200px -96px;
+}
+.jd_nav .img7{
+    background-position: -300px -96px;
+}
+.jd_nav .img8{
+    background-position: -400px -96px;
+}
+.jd_nav .img9{
+    background-position: -500px -96px;
+}
+.jd_nav .img10{
+    background-position: -600px -96px;
+}
+.jd_nav .img11{
+    background-position: -200px -188px;
+}
+.jd_nav .img12{
+    background-position: -300px -188px;
+}
+.jd_nav .img13{
+    background-position: -400px -188px;
+}
+.jd_nav .img14{
+    background-position: -500px -188px;
+}
+.jd_nav .img15{
+    background-position: -600px -188px;
+}
+.jd_nav .img16{
+    background-position: -200px -187px;
+}
+.jd_nav .img17{
+    background-position: -300px -187px;
+}
+.jd_nav .img18{
+    background-position: -400px -187px;
+}
+.jd_nav .img19{
+    background-position: -500px -187px;
+}
+.jd_nav .img20{
+    background-position: -600px -187px;
+}
+.jd_nav span{
+    transform: scale(0.75);
+}
+
+.jd_nav{
+    width: 100%;
+    position: relative;
+    top: -10px;
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+.jd_nav ul:first-child{
+    /* width: 200%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%); */
+    width: 100%;
+    overflow: hidden;
+}
+.jd_nav ul:first-child li{
+    width: 20%;
+    float: left;
+}
+.jd_nav ul:first-child li a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.jd_nav ul:first-child li a p{
+    color: #666;
+    font-size: 12px;
+}
+.jd_nav ul:last-child{
+    position: relative;
+    left: 50%;
+    margin: 8px 0px 3px -14px; 
+    width: 28px;   /* 下面的宽度（3+8）*8个点 */
+    overflow: hidden;
+}
+.jd_nav ul:last-child li{
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    float: left;
+    margin-left: 8px;
+}
+.jd_nav ul:last-child li:first-child{
+    margin-left: 0;
+}
+.jd_nav ul:last-child li.now{
+    width: 6px;
+    border-radius: 3px;
+    border: 1px solid #F07678;
+    background-color: #F07678;
+} 
+
+/* 产品区块 */
+.jd_product{
+    padding: 0 10px;
+    margin-top: -15px;
+}
+/* 秒杀专区 */
+.jd_product .jd_proBox{
+    margin-top: 10px;
+    box-shadow: 0 0 1px #d8d8d8;
+    background-color: #fff;
+    overflow: hidden;
+}
+.jd_product .jd_proBox .jd_proTitle{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+}
+.jd_product .jd_proBox .jd_proTitle .f_left ul{
+    display: block;
+    overflow: hidden;
+}
+.jd_product .jd_proBox .jd_proTitle .f_left ul .sk_icon{
+    width: 85px;
+    height: 38px;
+    display: inline-block;
+    background: url(../image/sk-bg-1.png) no-repeat;
+    background-size: 80px 38px;
+    margin-left: 10px
+}
+.jd_product .jd_proBox .jd_proTitle .f_left ul .sk_text{
+    font-weight: bold;
+    font-size: 12px;
+}
+.jd_product .jd_proBox .jd_proTitle .f_left ul .sk_time{
+    margin-left: 5px;
+    font-size: 12px;
+}
+.jd_product .jd_proBox .jd_proTitle .f_left ul .sk_time span{
+    padding: 1px;
+    background: #000;
+    color: white;
+}
+.jd_product .jd_proBox .jd_proTitle .f_right{
+    font-size: 13px;
+}
+/* 内容 */
+.jd_product .jd_proBox .jd_proContent{
+    width: 100%;
+}
+.jd_product .jd_proBox .jd_proContent ul span{
+    width: 185px;
+    height: 191px;
+    background: url(../image/sprite_proProduct.fw.png);
+    display: inline-block;
+}
+.jd_product .jd_proBox .jd_proContent ul .img1{
+    background-position: 0px 0px;
+}
+.jd_product .jd_proBox .jd_proContent ul .img2{
+    background-position: -192.5px 0px;
+}
+.jd_product .jd_proBox .jd_proContent ul .img3{
+    background-position: -385px 0px;
+}
+.jd_product .jd_proBox .jd_proContent ul .img4{
+    background-position: -577.5px 0px;
+}
+.jd_product .jd_proBox .jd_proContent ul li{
+    text-align: center;
+    float: left;
+}
+.jd_product .jd_proBox .jd_proContent ul p{
+    color: #E93B3D;
+    font-weight: bold;
+}
+.jd_product .jd_proBox .jd_proContent ul s{
+    color: #A2A2A2;
+    font-size: 10px;
+}
+/* 优惠券 */
+.jd_product .jd_couponBox{
+    min-height: 100px;
+    background: #fff;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.jd_product .jd_couponBox ul{
+    width: 100%;
+    overflow: hidden;
+    font-size: 0;   
+}
+.jd_product .jd_couponBox ul li{
+    width: 50%;
+    float: left;
+}
+.jd_product .jd_couponBox ul li a img{
+    width: 100%
+}
+/* 喜爱-东家小院 */
+.jd_product .jd_loveBox{
+    min-height: 100px;
+    overflow: hidden;
+}
+.jd_product .jd_loveTitle{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    overflow: hidden;
+    font-size: 0;
+}
+.jd_product .jd_loveTitle img{
+    width: 100%;               /* 用了这个之后，在移动端，它也能够正确缩放 */
+}
+.jd_product .jd_loveBox .jd_loveContent{
+    background: #fff;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productTwo .jd_money{
+    border-right: 1px solid #F5F5F5;
+    border-bottom: 1px solid #F5F5F5; 
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productTwo .jd_power{
+    border-bottom: 1px solid #F5F5F5; 
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productTwo span{
+    font-weight: 900;
+    font-size: 16px;
+    /* S == 字体色彩渐变 */
+    background: -webkit-linear-gradient(left,#45CAFF,#1471FB);
+    background: linear-gradient(left, #45CAFF,#1471FB);
+    -webkit-background-clip: text;   /* 设置背景图片的裁剪区域 */
+    color: transparent;
+    /* E == 字体色彩渐变 */
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productTwo div{
+    width: 45%;   /* 本来是50%的，但是下面加了padding，所以内容要缩小 */
+    float: left;
+    padding: 6px;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productTwo div p{
+    color: #666771;
+    font-size: 13px;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productTwo div ul{
+    width: 100%;
+    overflow: hidden;
+    font-size: 0; 
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productTwo div ul li{
+    width: 40%;
+    float: left;
+    padding: 8px;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productTwo div ul li a img{
+    width: 100%
+}
+
+.jd_product .jd_loveBox .jd_loveContent .jd_productFour ul{
+    width: 100%;
+    overflow: hidden;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productFour ul li{
+    width: 20%;
+    float: left;
+    padding: 8px;
+    border-right: 1px solid #f5f5f5;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productFour ul li:last-child{
+    border: 0px;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productFour ul li a img{
+    width: 90%;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productFour ul li span{
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.jd_product .jd_loveBox .jd_loveContent .jd_productFour ul li p{
+    font-size: 13px;
+    color: #666771;
+    margin: 2px 0px 4px 0px;
+}
+/* 每日逛 */
+.jd_product .jd_everyDayBox{
+    min-height: 100px;
+    overflow: hidden;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent{
+    background: #ffffff;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour ul{
+    width: 100%;
+    overflow: hidden;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour ul li{
+    width: 22%;
+    float: left;
+    padding: 4px;
+    border-right: 1px solid #f5f5f5;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour ul li:last-child{
+    border: 0px;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour ul li a img{
+    width: 90%;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour ul li span{
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(left,#FF2A2F,#F93175,#F238C6);
+    background: -webkit-linear-gradient(left,#FF2A2F,#F93175,#F238C6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour ul li p{
+    font-size: 13px;
+    color: #666771;
+    margin: 2px 0px 4px 0px;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour:first-child ul li{
+    border-left: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour:first-child ul li:last-child{
+    border-left: 0px;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour:last-child ul li{
+    border-left: 1px solid #f5f5f5;
+}
+.jd_product .jd_everyDayBox .jd_everyDayContent .jd_productFour:last-child ul li:last-child{
+    border-left: 0px;
+}
+
+/* 为你推荐 */
+.jd_product .jd_forYouBox .jd_forYouContent{
+    width: 100%;
+    overflow: hidden;
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul{
+    width: 100%;
+    text-align: center;
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul li{
+    width: 49.5%;
+    margin-bottom: 4px; 
+    background-color: #fff;
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul li:first-child{
+    float: left;
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul li:last-child{
+    float: right;
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul li a div div img{
+    width: 100%;
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul li a div .similar_content{
+    font-size: 13px;
+    /* S == 将文字控制在两行内，超过的用省略号替代 */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* E == 将文字控制在两行内，超过的用省略号替代 */
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul li a div p{
+    width: 100%;
+    overflow: hidden;
+    margin: 2px 0px 20px 0px;
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul li a div p .similar_floor_l{
+    float: left;
+    color: #F45050;
+}
+.jd_product .jd_forYouBox .jd_forYouContent div ul li a div p .similar_floor_r{
+    float: right;
+    color: #686868;
+    font-size: 12px;
+    padding: 4px;
+    border: 1px solid #DEDEDE;
+    margin-right: 6px;
+}

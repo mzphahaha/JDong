@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tap事件的原理 手势事件</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 300px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        window.onload = function(){
+            var div = document.querySelector('div');
+
+            // 没有移动鼠标时才会有click，且出现在touchend之后
+            // div.addEventListener('click', function(){
+            //     console.log('click');
+            // });
+
+            // 满足什么条件才认为是tap
+            // 1、比click响应快 在150ms以内
+            // 2、不能滑动
+            // 称为tap事件
+
+            var startTime = 0;
+            var ismove = false;
+            // 1、开始记录触摸屏幕的时间
+            div.addEventListener('touchstart', function(){
+                startTime = Date.now(); // new Date().getTime();  // 当前距离1970年的毫秒数
+                // 给定一个参数开始记录时间
+                console.time('time');
+            });
+            div.addEventListener('touchmove', function(){
+                console.log('touchmove');
+                ismove = true;
+            });
+            div.addEventListener('touchend', function(){
+                // 2、更新现在的时间去比较基路开始触摸屏幕的时间 如果小于150ms 则满足条件
+                // 去除某个参数和现在时间的差
+                console.timeEnd('time');
+                console.log(Date.now()-startTime);
+                if(!ismove && Date.now()-startTime < 150){
+                    console.log('tap');
+                }
+
+                // 重置参数
+                startTime = 0;
+                ismove = false;
+            });
+        }
+    </script>
+</body>
+</html>

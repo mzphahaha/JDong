@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul, li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .jd_nav{
+            width: 375px;
+        }
+
+        .jd_nav .test1{
+            width: 100%;
+            min-height: 100px;
+        }
+        .jd_nav .test1 div{
+            width: 50%;
+            height: 80px;
+            background-color: green;
+            float: left;
+        }
+        .div-inline{
+            display: inline;
+        }
+        .jd_nav .test1 div ul{
+            width: 100%;
+            overflow: hidden;
+            font-size: 0; 
+        }
+        .jd_nav .test1 div ul li{
+            width: 40%;
+            float: left;
+            padding: 5px;
+        }
+        .jd_nav .test1 div ul li a img{
+            width: 100%
+        }
+
+    </style>
+</head>
+<body>
+    <div class="jd_container">
+        <!-- 导航栏 -->
+        <div class="jd_nav">
+            <div class="test1">
+                <div class="fang1 div-inline">
+                    <p>你好</p>
+                    <ul>
+                        <li><a href="#"><img src="../image/loveProduct1.png" alt=""></a></li>
+                        <li><a href="#"><img src="../image/loveProduct2.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="fang2 div-inline">
+                    <p>我好</p>
+                    <ul>
+                        <li><a href="#"><img src="../image/loveProduct3.png" alt=""></a></li>
+                        <li><a href="#"><img src="../image/loveProduct4.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- TODO -->
+    
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

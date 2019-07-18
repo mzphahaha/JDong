@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>理解手势事件</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100%;
+            height: 300px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        window.onload = function(){
+            var dom = document.querySelector('div');
+            // 绑定事件
+            // 1、必须滑动过
+            // 2、滑动距离超过50px
+            // 3、衍生出 左滑和右滑 手势事件
+            var startX = 0;
+            var distanceX = 0;
+            var ismove = false;
+            dom.addEventListener('touchstart', function(e){
+                startX = e.changedTouches[0].clientX;
+            });
+            dom.addEventListener('touchmove', function(e){
+                var moveX = e.changedTouches[0].clientX;
+                distanceX = moveX - startX;
+                ismove = true;
+            });
+            dom.addEventListener('touchend', function(e){
+                // 1、必须滑动过
+                // 2、滑动距离超过50px
+                if(ismove && Math.abs(distanceX) >= 50){
+                    if(distanceX > 0){
+                        console.log('右滑事件');
+                    }else{
+                        console.log('左滑事件');
+                    }
+                }
+                // 重置参数
+                startX = 0;
+                distanceX = 0;
+                ismove = false;
+            });
+        }
+    </script>
+</body>
+</html>

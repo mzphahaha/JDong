@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过渡和动画 结束事件</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 300px;
+            background: green;
+            /* transition: all 2s; */
+            animation: big 4s;
+        }
+        /* setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
+        setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。
+        由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数 */
+        @keyframes big{
+            from{
+
+            }to{
+                width: 100px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // transitionend 监听过渡结束事件
+        document.querySelector('div').addEventListener('transitionend',function(){
+            console.log('transitionend');
+        });
+
+        // animationend 监听动画结束事件
+        document.querySelector('div').addEventListener('animationend',function(){
+            console.log('animationend');
+        });
+    </script>
+</body>
+</html>

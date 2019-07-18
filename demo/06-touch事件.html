@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>touch事件</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 300px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 给div绑定touch事件
+        var dom = document.querySelector('div');
+
+        // touchstart
+        // 手指刚刚触摸到屏幕的时候 触发的事件
+        dom.addEventListener('touchstart', function(e){
+            console.log(e);
+        });  // 谷歌
+        // dom.attachEvent();    // ie
+
+        // 手指在屏幕上滑动的时候 会不停的触发事件
+        dom.addEventListener('touchmove', function(e){
+            console.log(e);
+        });
+
+        // 手指离开屏幕的时候 触发的事件
+        dom.addEventListener('touchend', function(e){
+            console.log(e);
+        });
+    </script>
+</body>
+</html>
